@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int a,*b,**c;
+  a=20;
+  b=&a;
+  c=&b;
+  clrscr();
+  printf("%u\n",*c);
+  printf("%u",**c);
+  getch();
+}  
+  
+  
