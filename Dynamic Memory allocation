@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+typedef struct node_type
+{
+  int info;
+  struct node_type *next;
+}node;
+void main()
+{
+  int i,value,temp;
+  node *ptr,*head=NULL;
+  clrscr();
+  for(i=0;i<5;i++)
+  {
+      ptr=(node *)malloc(sizeof(node));
+      printf("Enter value:");
+      scanf("%d",&value);
+      ptr->info=value;
+      ptr->next=head;
+      head=ptr;
+  }
+  printf("\n\n");
+  while(head!=NULL)
+  {
+    printf("%d-> ",head->info);
+    head=head->next;
+  }
+  printf("NULL");
+  getch();
+}
