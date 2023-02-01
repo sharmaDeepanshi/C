@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+void main()
+{ int i;
+  int *p,*q;
+  clrscr();
+  p=calloc(sizeof(int),10);
+  q=p;
+  for(i=0;i<10;i++)
+  {
+    *(p+i)=i;
+  }
+  for(i=0;i<10;i++)
+  {
+    printf("[%d] ",*(p+i));
+  }
+  printf("\n\n");
+  p=realloc(p,sizeof(int)*15);
+  for(i=0;i<15;i++)
+  {
+    *(p+i)=i;
+  }
+  for(i=0;i<15;i++)
+  {
+    printf("[%d] ",*(p+i));
+  }
+  free(p);
+  getch();
+}
