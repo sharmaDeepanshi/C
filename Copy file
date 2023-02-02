@@ -5,13 +5,13 @@ void main()
   FILE *fp1,*fp2;
   char ch;
   clrscr();
-   fp1=fopen("myfile1.txt","w");
+   fp1=fopen("myfile1.txt","w");                     //Name of the file to be copied
    while((ch=getche())!='$')
    { fputc(ch,fp1);
    }
    fclose(fp1);
    fp1=fopen("myfile1.txt","r");
-   fp2=fopen("myfile.txt","w");
+   fp2=fopen("myfile.txt","w");                      //name of the file where to paste the content
    while((ch=fgetc(fp1))!=EOF)
    { fputc(ch,fp2);
    }
