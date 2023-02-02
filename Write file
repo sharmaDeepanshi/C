@@ -5,7 +5,7 @@ void main()
   FILE *fp1;
   char ch;
   clrscr();
-   fp1=fopen("myfile.txt","a");
+   fp1=fopen("myfile.txt","w");
    while((ch=getche())!='$')
    {
      fputc(ch,fp1);
