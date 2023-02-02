@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  FILE *fp1,*fp2;
+  char ch;
+  clrscr();
+   fp1=fopen("myfile1.txt","w");
+   while((ch=getche())!='$')
+   { fputc(ch,fp1);
+   }
+   fclose(fp1);
+   fp1=fopen("myfile1.txt","r");
+   fp2=fopen("myfile.txt","w");
+   while((ch=fgetc(fp1))!=EOF)
+   { fputc(ch,fp2);
+   }
+   fclose(fp1);
+   fclose(fp2);
+}
