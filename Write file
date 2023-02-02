@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  FILE *fp1;
+  char ch;
+  clrscr();
+   fp1=fopen("myfile.txt","a");
+   while((ch=getche())!='$')
+   {
+     fputc(ch,fp1);
+   }
+   fclose(fp1);
+}
